@@ -1,81 +1,204 @@
-# 📝 Quora-Style RESTful Posts App
+# 📝 Task Management Web Application
 
-A minimal full-stack Node.js application that allows users to **Create**, **Read**, **Update**, and **Delete** (CRUD) simple text-based posts — just like a mini version of Quora. Built with **Express.js**, **EJS templates**, and basic HTML/CSS.
+A clean, minimal, and professional task management application built with Node.js and Express. This project demonstrates full-stack development fundamentals with CRUD operations, RESTful API design, and a responsive black-and-white themed UI.
+
+**Developer:** Aaditya Jagtap
 
 ---
 
-## 🚀 Features
+## 🎯 Project Overview
 
-- View all posts on the homepage
-- Create a new post with a username and content
-- View a single post in detail
-- Edit an existing post
-- Delete a post
-- RESTful routing with method override
-- EJS templating for rendering dynamic views
-- Styled with plain CSS (located in `/public/style.css`)
+This task management system allows users to efficiently manage their daily tasks with an intuitive interface. The application follows modern web development practices with a focus on code quality, user experience, and clean architecture.
+
+---
+
+## ✨ Features
+
+- **Create Tasks** - Add new tasks with title and description
+- **View Tasks** - Display all tasks in a clean, organized list
+- **Update Tasks** - Edit existing task details
+- **Delete Tasks** - Remove completed or unwanted tasks
+- **Responsive Design** - Works seamlessly across desktop, tablet, and mobile devices
+- **Professional UI** - Minimalist black-and-white theme with smooth animations
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Node.js, Express.js
-- **Templating Engine**: EJS
-- **Frontend**: HTML5, CSS3
-- **Utilities**: UUID for unique post IDs, Method-Override for PATCH & DELETE
+**Frontend:**
+- HTML5
+- CSS3 (Custom styling with animations)
+- EJS (Embedded JavaScript Templates)
+
+**Backend:**
+- Node.js
+- Express.js
+- UUID (for unique task IDs)
+- Method-Override (for PUT/DELETE requests)
+
+**Data Storage:**
+- In-memory storage (easily replaceable with database)
 
 ---
 
 ## 📁 Project Structure
 
-quora-replica/
-├── public/
-│ └── style.css # Basic styling
+```
+task-management-app/
+│
 ├── views/
-│ ├── index.ejs # Homepage - list all posts
-│ ├── new.ejs # Form to create a new post
-│ ├── edit.ejs # Form to edit a post
-│ └── show.ejs # View a single post in detail
-├── index.js # Main server-side application
-├── package.json
-└── README.md
+│   ├── index.ejs          # Main task list page
+│   ├── new.ejs            # Create new task form
+│   ├── show.ejs           # View single task details
+│   └── edit.ejs           # Edit task form
+│
+├── public/
+│   └── style.css          # Application styles
+│
+├── index.js               # Main server file
+├── package.json           # Dependencies
+└── README.md              # Documentation
+```
 
 ---
 
-## 📦 Installation
+## 🚀 Getting Started
 
-1. Clone this repository:
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (Node Package Manager)
+
+### Installation
+
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/BitManipulator-cyber/quora-replica.git
-   cd quora-replica
+   git clone <repository-url>
+   cd task-management-app
+   ```
 
-2. Start the development server
-    ```bash
-    node index.js
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-3. Open your browser and go to
-    ```Chrome
-    http://localhost:8080/posts
-    
-## Concepts Demonstrated
+3. **Start the server**
+   ```bash
+   node index.js
+   ```
 
-1. Full CRUD operations using Express.js
+4. **Open your browser**
+   ```
+   Navigate to: http://localhost:8080
+   ```
 
-2. Dynamic HTML rendering with EJS
+---
 
-3. Using uuid for unique post IDs
+## 📦 Dependencies
 
-4. Using method-override to support PUT/PATCH/DELETE via HTML forms
+```json
+{
+  "express": "^4.18.2",
+  "ejs": "^3.1.9",
+  "uuid": "^9.0.0",
+  "method-override": "^3.0.0"
+}
+```
 
-5. Modular folder structure and static file serving
+Install all dependencies with:
+```bash
+npm install express ejs uuid method-override
+```
 
-## License
+---
 
-This project is open source and available under the MIT License.
+## 🎨 API Endpoints
 
-## Author
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | Redirects to `/todos` |
+| GET | `/todos` | Display all tasks |
+| GET | `/todos/new` | Show create task form |
+| POST | `/todos` | Create a new task |
+| GET | `/todos/:id` | View single task |
+| GET | `/todos/:id/edit` | Show edit task form |
+| PATCH | `/todos/:id` | Update a task |
+| DELETE | `/todos/:id` | Delete a task |
 
-Aaditya Jagtap
-GitHub : https://github.com/BitManipulator-cyber
+---
 
-    
+## 💡 Key Highlights
+
+### Clean Code Architecture
+- Modular routing structure
+- RESTful API design principles
+- Separation of concerns
+
+### User Experience
+- Intuitive navigation
+- Smooth animations and transitions
+- Empty state handling
+- Responsive button layouts
+
+### Design Philosophy
+- Minimalist black-and-white aesthetic
+- Brutalist-inspired UI with bold borders
+- Professional typography and spacing
+- Mobile-first responsive design
+
+---
+
+## 🔄 Future Enhancements
+
+- [ ] Database integration (MongoDB/PostgreSQL)
+- [ ] User authentication and authorization
+- [ ] Task categories and tags
+- [ ] Due dates and reminders
+- [ ] Search and filter functionality
+- [ ] Task completion status toggle
+- [ ] Export tasks to CSV/PDF
+- [ ] Dark mode support
+
+---
+
+## 📝 Assignment Compliance
+
+This project fulfills all requirements of the **Global Trend Full Stack Development Internship** assignment:
+
+✅ **Frontend** - Responsive UI with HTML, CSS, and EJS templating  
+✅ **Backend** - RESTful API with Express.js  
+✅ **CRUD Operations** - Complete Create, Read, Update, Delete functionality  
+✅ **Code Quality** - Clean, organized, and well-documented code  
+✅ **Problem-Solving** - Efficient routing and data management  
+
+---
+
+## 👨‍💻 Developer
+
+**Aaditya Jagtap**
+
+Built as part of the Global Trend Full Stack Development Internship assessment.
+
+---
+
+## 📄 License
+
+This project is open source and available for educational purposes.
+
+---
+
+## Visual Output:
+
+**1. Index page:**
+![Index page](./assets/index.png)
+
+**2. View page:**
+![View the note page](./assets/View.png)
+
+**3. Edit page**
+![Edit notes page](./assets/Edit.png)
+
+**4. Create page:**
+![Create notes page](./assets/Create.png)
+
+**Note:** This application currently uses in-memory storage for simplicity. For production use, integrate a persistent database like MongoDB, PostgreSQL, or MySQL.
