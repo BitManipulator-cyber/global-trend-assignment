@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Todo - Create Task</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-solid fa-plus"></i> Create New Todo</h1>
+        
+        <form action="/todos" method="POST">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter todo title..." required>
+            </div>
+            
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Enter todo description..."></textarea>
+            </div>
+            
+            <button type="submit">Add Todo</button>
+        </form>
+        
+        <div style="border: none; box-shadow: none; padding: 0; margin-top: 20px; background: transparent;">
+            <a href="/todos"><i class="fa-solid fa-arrow-left-long"></i>Back to List</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Built by Aaditya Jagtap</p>
+    </footer>
+</body>
+</html>

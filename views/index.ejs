@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Manage Your Tasks</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa-regular fa-clipboard"></i> My Todos</h1>
+        
+        <% if (todos.length === 0) { %>
+            <div class="empty-state">
+                <p>No todos yet. Start by adding your first task!</p>
+            </div>
+        <% } else { %>
+            <% for (let todo of todos) { %>
+            <div class="todo-card">
+                <h3><%= todo.title %></h3>
+                <p><%= todo.description %></p>
+                <div class="actions">
+                    <a href="/todos/<%= todo.id %>">View</a>
+                    <a href="/todos/<%= todo.id %>/edit">Edit</a>
+                    <form action="/todos/<%= todo.id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% } %>
+        <% } %>
+        
+        <div style="text-align: center; border: none; box-shadow: none; padding: 0; background: transparent;">
+            <a href="/todos/new"><i class="fa-solid fa-plus"></i> Add New Todo</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Built by Aaditya Jagtap</p>
+    </footer>
+</body>
+</html>

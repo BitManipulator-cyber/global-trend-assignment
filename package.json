@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aaditya Jagtap",
+  "license": "ISC",
+  "description": "A minimal full-stack Node.js application that allows users to **Create**, **Read**, **Update**, and **Delete** (CRUD) simple text-based posts — just like a mini version of Quora. Built with **Express.js**, **EJS templates**, and basic HTML/CSS.",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "method-override": "^3.0.0",
+    "nodemon": "^3.1.11",
+    "uuid": "^11.1.0"
+  }
+}
